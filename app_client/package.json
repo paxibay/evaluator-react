@@ -23,14 +23,15 @@
     "semantic-ui-react": "^0.78.3",
     "whatwg-fetch": "^2.0.3"
   },
+  "devDependencies": {
+    "json-server": "^0.12.1"
+  },
   "scripts": {
-    "start": "react-scripts start & npm run apiserver",
-    "apiserver": "json-server --watch --p 3500 ./../app_server/json/index.js",
+    "start": "react-scripts start & react-scripts run apiserver",
+    "apiserver": "json-server --watch --p 4000 ./../app_server/json/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "json-server": "^0.12.1"
-  }
+  "proxy": "http://localhost:3500/"
 }
